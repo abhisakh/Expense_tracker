@@ -73,3 +73,4 @@ else:
         df_updated = df_reset.drop(index=index_to_delete)
         df_updated.to_csv("expenses.csv", index=False)
         st.success(f"Deleted expense at index {index_to_delete}.")
+
