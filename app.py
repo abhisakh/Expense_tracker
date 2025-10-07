@@ -3,18 +3,14 @@
 import streamlit as st
 import pandas as pd
 from datetime import datetime
-import os
 
-# CSV file to store expenses
-FILENAME = "expenses.csv"
+from data_handler import init_file, load_data, save_expense  # 🧠 Import here
 
-# Create the file if it doesn't exist
-if not os.path.exists(FILENAME):
-    df = pd.DataFrame(columns=["Date", "Category", "Amount", "Description"])
-    df.to_csv(FILENAME, index=False)
+# Initialize file
+init_file()
 
 # Load existing data
-df = pd.read_csv(FILENAME)
+df = load_data()
 
 st.title("💸 Expense Tracker")
 
@@ -34,7 +30,7 @@ with st.form("expense_form"):
             "Amount": [amount],
             "Description": [description]
         })
-        new_expense.to_csv(FILENAME, mode="a", header=False, index=False)
+        save_expense(new_expense)  # ⬅️ Use modular function
         st.success("Expense added successfully!")
 
 # Show all expenses
