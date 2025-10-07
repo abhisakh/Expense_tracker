@@ -1,6 +1,6 @@
 
+<img width="807" height="1474" alt="Screenshot 2025-10-07 at 22 45 26" src="https://github.com/user-attachments/assets/af3d0afa-afc5-4df9-a29a-f023c6818e27" />
 
-<img width="732" height="795" alt="Screenshot 2025-10-07 at 18 34 26" src="https://github.com/user-attachments/assets/47409b2f-beab-439b-aa86-d981706c471d" />
 
 --------------------------------------------------------
 # Expense Tracker App
@@ -42,8 +42,9 @@ streamlit run app.py
 http://localhost:8501
 ```
 ### Deployment
-```bash
 This app is deployed on Streamlit Cloud:
+```bash
+
 https://expensetracker-aapy33g8usqjyzvjqhsgeu.streamlit.app
 ```
 ### 👤 Author
