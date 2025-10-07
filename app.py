@@ -44,3 +44,21 @@ st.write(f"**Total Spent:** ${total_spent:.2f}")
 
 category_summary = df.groupby("Category")["Amount"].sum()
 st.bar_chart(category_summary)
+
+#------------------Delete if wrongly added -----------------
+st.subheader("🗑️ Delete an Expense")
+
+# Reload the data to reflect any new additions
+df = load_data()
+
+if not df.empty:
+    # Add row indices for selection
+    df_with_index = df.reset_index()
+    selected_index = st.selectbox("Select an expense to delete:", df_with_index["index"])
+
+    if st.button("Delete Selected Expense"):
+        df = df.drop(index=selected_index)
+        df.to_csv("expenses.csv", index=False)
+        st.success("Expense deleted successfully.")
+else:
+    st.info("No expenses to delete.")
