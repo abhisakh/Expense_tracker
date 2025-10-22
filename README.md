@@ -25,7 +25,7 @@ A simple web app built with Streamlit and pandas to track your daily expenses.
 #### 1. Clone the repo:
 
 ```bash
-git clone https://github.com/yourusername/Expense_tracker.git
+git clone https://github.com/abhisakh/Expense_tracker.git
 cd Expense_tracker
 ```
 #### 2. Install dependencies:
